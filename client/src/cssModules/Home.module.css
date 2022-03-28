@@ -1,0 +1,8 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+body {
+    background-image: url('https://wallpapercave.com/wp/wp2689759.jpg');
+}
