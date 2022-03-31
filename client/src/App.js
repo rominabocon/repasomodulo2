@@ -9,8 +9,14 @@ para renderizar los componentes en sus respectivos paths */
 
 export default function App() {
     return(
-        <>
-
-        </>
+        <Router>
+            <div>
+                <Switch>
+                    <Route exact path='/create' component={CreateCharacter} />
+                    <Route exact path='/' component={Home}></Route>
+                    <Route exact path='/:id' component={Details} />
+                </Switch>
+            </div>
+        </Router>
     );
 }

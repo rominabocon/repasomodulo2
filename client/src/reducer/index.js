@@ -16,6 +16,21 @@ returns modificando el estado dependiendo de lo que se requiera en cada accion *
 
 const reducer = (state = initialState, action) => {
     switch(action.type) {
+        case GET_CHARACTERS:
+            return {
+                ...state,
+                characters: action.payload
+            }
+        case CHARACTER_DETAILS:
+            return {
+                ...state,
+                details: action.payload
+            }
+        case CREATE_CHARACTER:
+            return {
+                ...state,
+                charactersCreated: [...state.charactersCreated, action.payload]
+            }
         default:
             return state
     }
